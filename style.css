@@ -1,0 +1,67 @@
+/* fluid layout */
+.div-container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: violet;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .div-container {
+        width: 80%;
+        background-color: lightblue;
+    }
+
+    body{
+        background-color: lightsalmon;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+/* Flexible LAyout */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(208, 59, 59);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    background-color:lightpink;
+    padding: 20px;
+    margin: 10px;
+    flex: 1; /* This will make the items flexible */
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header'
+    'menu main right' 
+    'footer footer footer';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-item1{ grid-area: header; background-color: skyblue;}
+.grid-item2{ grid-area: menu; background-color: lightblue;}
+.grid-item3{ grid-area: main; background-color: purple;}
+.grid-item4{ grid-area: right; background-color: violet;}
+.grid-item5{ grid-area: footer; background-color: lawngreen;}
+@media (max-width: 600px){
+    .grid-container {
+        grid-template-areas: 'header'
+        'menu'
+        'main'
+        'right'
+        'footer';
+    }
+}
